@@ -25,6 +25,16 @@ namespace ApplicationSenSoutenance.Views.Parametre
         {
             try
             {
+                // Vérifier qu'une ligne est sélectionnée
+                if (dgAnneeAcademique.CurrentRow == null)
+                {
+                    MessageBox.Show("Veuillez sélectionner une année académique à supprimer!",
+                                    "Attention",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                    return;
+                }
+
                 // Récupérer l'ID de l'année académique à supprimer
                 int id = int.Parse(dgAnneeAcademique.CurrentRow.Cells[0].Value.ToString());
 
@@ -45,14 +55,18 @@ namespace ApplicationSenSoutenance.Views.Parametre
                 bd.anneeAcademiques.Remove(anneeAcademique);
                 bd.SaveChanges();
 
-                MessageBox.Show("Année académique supprimée avec succès!", "Succès",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Année académique supprimée avec succès!",
+                                "Succès",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
                 Effacer();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erreur lors de la suppression: " + ex.Message, "Erreur",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erreur lors de la suppression: " + ex.Message,
+                                "Erreur",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
         }
 

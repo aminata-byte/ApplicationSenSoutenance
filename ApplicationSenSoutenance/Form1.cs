@@ -15,6 +15,11 @@ namespace ApplicationSenSoutenance
         public frmConnexion()
         {
             InitializeComponent();
+            // Plein écran
+            this.WindowState = FormWindowState.Maximized;
+
+            // Garder les bordures mais maximiser
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

@@ -40,7 +40,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkViolet;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(29, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 26);
@@ -69,7 +69,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkViolet;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(29, 138);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(141, 26);
@@ -78,9 +78,9 @@
             // 
             // btnSeConnecter
             // 
-            this.btnSeConnecter.BackColor = System.Drawing.Color.DarkViolet;
+            this.btnSeConnecter.BackColor = System.Drawing.Color.White;
             this.btnSeConnecter.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeConnecter.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnSeConnecter.ForeColor = System.Drawing.Color.Black;
             this.btnSeConnecter.Location = new System.Drawing.Point(174, 290);
             this.btnSeConnecter.Name = "btnSeConnecter";
             this.btnSeConnecter.Size = new System.Drawing.Size(135, 37);
@@ -92,7 +92,7 @@
             // btnQuitter
             // 
             this.btnQuitter.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitter.ForeColor = System.Drawing.Color.DarkViolet;
+            this.btnQuitter.ForeColor = System.Drawing.Color.Black;
             this.btnQuitter.Location = new System.Drawing.Point(4, 290);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(138, 37);
@@ -105,6 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
             this.ClientSize = new System.Drawing.Size(313, 374);
             this.ControlBox = false;
             this.Controls.Add(this.btnQuitter);
