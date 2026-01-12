@@ -84,6 +84,13 @@ namespace ApplicationSenSoutenance
             this.Width = myComputer.Screen.Bounds.Width;
             this.Height = myComputer.Screen.Bounds.Height;
             this.Location = new Point(0, 0);
+
+            // Ouvrir automatiquement Année Académique quand on se connecte
+            fermer(); // au cas où
+            frmAnneeAcademique f = new frmAnneeAcademique();
+            f.MdiParent = this;
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
         }
 
         private void candidatToolStripMenuItem_Click(object sender, EventArgs e)
