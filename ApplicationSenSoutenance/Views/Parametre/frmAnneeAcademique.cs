@@ -16,7 +16,7 @@ namespace ApplicationSenSoutenance.Views.Parametre
         public frmAnneeAcademique()
         {
             InitializeComponent();
-            lblTitreMenu.Height = 60;
+            
         }
         
         BdSenSoutenanceContext bd = new BdSenSoutenanceContext();
@@ -136,6 +136,23 @@ namespace ApplicationSenSoutenance.Views.Parametre
         private void lblTitreMenu_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // On n'ouvre PAS depuis frmAnneeAcademique directement
+            // On demande à frmMDI d'ouvrir la page Mémoire
+            frmMDI mdiParent = this.MdiParent as frmMDI;
+
+            if (mdiParent != null)
+            {
+                mdiParent.fermer();  // Ferme les autres pages enfants 
+
+                frmMemoire f = new frmMemoire();
+                f.MdiParent = mdiParent;  // ← IMPORTANT : parent = frmMDI, PAS this
+                f.Show();
+                f.WindowState = FormWindowState.Maximized;
+            }
         }
     }
 }

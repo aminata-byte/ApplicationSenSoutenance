@@ -37,13 +37,9 @@
             this.txtValeur = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.panelMenu = new System.Windows.Forms.Panel();
-            this.lblTitreMenu = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelContenu = new System.Windows.Forms.Panel();
             btnRemove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgAnneeAcademique)).BeginInit();
-            this.panelMenu.SuspendLayout();
             this.panelContenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -156,48 +152,6 @@
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // panelMenu
-            // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
-            this.panelMenu.Controls.Add(this.button1);
-            this.panelMenu.Controls.Add(this.lblTitreMenu);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(230, 450);
-            this.panelMenu.TabIndex = 7;
-            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
-            // 
-            // lblTitreMenu
-            // 
-            this.lblTitreMenu.AutoSize = true;
-            this.lblTitreMenu.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitreMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTitreMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitreMenu.ForeColor = System.Drawing.Color.White;
-            this.lblTitreMenu.Location = new System.Drawing.Point(0, 0);
-            this.lblTitreMenu.Name = "lblTitreMenu";
-            this.lblTitreMenu.Size = new System.Drawing.Size(165, 24);
-            this.lblTitreMenu.TabIndex = 0;
-            this.lblTitreMenu.Text = "Sen Soutenance";
-            this.lblTitreMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTitreMenu.Click += new System.EventHandler(this.lblTitreMenu_Click);
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 35);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Année Académique";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // panelContenu
             // 
             this.panelContenu.BackColor = System.Drawing.Color.White;
@@ -223,14 +177,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(819, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelContenu);
             this.Name = "frmAnneeAcademique";
             this.Text = "AnneeAcademique";
             this.Load += new System.EventHandler(this.frmAnneeAcademique_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgAnneeAcademique)).EndInit();
-            this.panelMenu.ResumeLayout(false);
-            this.panelMenu.PerformLayout();
             this.panelContenu.ResumeLayout(false);
             this.panelContenu.PerformLayout();
             this.ResumeLayout(false);
@@ -247,9 +198,6 @@
         private System.Windows.Forms.Label txtValeur;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Label lblTitreMenu;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panelContenu;
     }
 }

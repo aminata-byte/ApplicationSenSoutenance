@@ -16,5 +16,27 @@ namespace ApplicationSenSoutenance.Views.Parametre
         {
             InitializeComponent();
         }
+
+        private void Sujet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSelect_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void BtnSelect_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

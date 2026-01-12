@@ -25,7 +25,7 @@ namespace ApplicationSenSoutenance
         /// methode permettant de fermer tout les forms dans le ParentMDI
         /// </summary>
 
-        private void fermer()
+        public void fermer()
         {
             Form[] charr = this.MdiChildren;
 
@@ -86,7 +86,7 @@ namespace ApplicationSenSoutenance
             this.Location = new Point(0, 0);
 
             // Ouvrir automatiquement Année Académique quand on se connecte
-            fermer(); // au cas où
+            
             frmAnneeAcademique f = new frmAnneeAcademique();
             f.MdiParent = this;
             f.Show();
@@ -148,6 +148,26 @@ namespace ApplicationSenSoutenance
         private void parametreToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            fermer();  // Ferme les autres pages ouvertes (ta fonction existante)
+
+            frmAnneeAcademique f = new frmAnneeAcademique();
+            f.MdiParent = this;
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btnMemoire_Click(object sender, EventArgs e)
+        {
+            fermer();
+
+            frmMemoire f = new frmMemoire();
+            f.MdiParent = this;
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
         }
     }
 }
