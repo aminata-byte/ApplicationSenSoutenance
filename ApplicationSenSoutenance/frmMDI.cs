@@ -169,5 +169,10 @@ namespace ApplicationSenSoutenance
             f.Show();
             f.WindowState = FormWindowState.Maximized;
         }
+
+        private void BtnQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

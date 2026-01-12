@@ -45,6 +45,7 @@
             this.btnMemoire = new System.Windows.Forms.Button();
             this.btnAnneeAcademique = new System.Windows.Forms.Button();
             this.lblTitreMenu = new System.Windows.Forms.Label();
+            this.BtnQuitter = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -163,6 +164,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
+            this.panelMenu.Controls.Add(this.BtnQuitter);
             this.panelMenu.Controls.Add(this.btnMemoire);
             this.panelMenu.Controls.Add(this.btnAnneeAcademique);
             this.panelMenu.Controls.Add(this.lblTitreMenu);
@@ -216,6 +218,19 @@
             this.lblTitreMenu.Text = "Sen Soutenance";
             this.lblTitreMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // BtnQuitter
+            // 
+            this.BtnQuitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
+            this.BtnQuitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnQuitter.ForeColor = System.Drawing.Color.White;
+            this.BtnQuitter.Location = new System.Drawing.Point(-11, 384);
+            this.BtnQuitter.Name = "BtnQuitter";
+            this.BtnQuitter.Size = new System.Drawing.Size(241, 40);
+            this.BtnQuitter.TabIndex = 4;
+            this.BtnQuitter.Text = "Quitter";
+            this.BtnQuitter.UseVisualStyleBackColor = false;
+            this.BtnQuitter.Click += new System.EventHandler(this.BtnQuitter_Click);
+            // 
             // frmMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,5 +273,6 @@
         private System.Windows.Forms.Button btnMemoire;
         private System.Windows.Forms.Button btnAnneeAcademique;
         private System.Windows.Forms.Label lblTitreMenu;
+        private System.Windows.Forms.Button BtnQuitter;
     }
 }

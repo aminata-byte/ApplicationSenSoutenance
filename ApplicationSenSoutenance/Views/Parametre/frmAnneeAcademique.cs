@@ -23,11 +23,37 @@ namespace ApplicationSenSoutenance.Views.Parametre
         
         private void button4_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(dgAnneeAcademique.CurrentRow.Cells[0].Value.ToString());
-            AnneeAcademique anneeAcademique = bd.anneeAcademiques.Find(id); // ✅ Ajouté id
-            bd.anneeAcademiques.Remove(anneeAcademique);
-            bd.SaveChanges();
-            Effacer();
+            try
+            {
+                // Récupérer l'ID de l'année académique à supprimer
+                int id = int.Parse(dgAnneeAcademique.CurrentRow.Cells[0].Value.ToString());
+
+                // Vérifier si des mémoires utilisent cette année académique
+                bool hasMemoires = bd.memoires.Any(m => m.IdAnneeAcademique == id);
+
+                if (hasMemoires)
+                {
+                    MessageBox.Show("Impossible de supprimer cette année académique car elle est utilisée par des mémoires!",
+                                    "Attention",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Si aucun mémoire n'utilise cette année, on peut supprimer
+                AnneeAcademique anneeAcademique = bd.anneeAcademiques.Find(id);
+                bd.anneeAcademiques.Remove(anneeAcademique);
+                bd.SaveChanges();
+
+                MessageBox.Show("Année académique supprimée avec succès!", "Succès",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Effacer();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur lors de la suppression: " + ex.Message, "Erreur",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void frmAnneeAcademique_Load(object sender, EventArgs e)

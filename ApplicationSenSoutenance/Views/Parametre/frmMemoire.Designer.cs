@@ -56,6 +56,7 @@
             btnRemove.TabIndex = 10;
             btnRemove.Text = "&Supprimer";
             btnRemove.UseVisualStyleBackColor = false;
+            btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // panelContenu
             // 
@@ -117,6 +118,7 @@
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "&Ajouter";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // cmbSession
             // 
@@ -195,6 +197,7 @@
             this.Controls.Add(this.panelContenu);
             this.Name = "frmMemoire";
             this.Text = "frmMemoire";
+            this.Load += new System.EventHandler(this.frmMemoire_Load);
             this.panelContenu.ResumeLayout(false);
             this.panelContenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgMemoires)).EndInit();
