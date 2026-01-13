@@ -1,4 +1,6 @@
 ﻿using ApplicationSenSoutenance.Models;
+using ApplicationSenSoutenance.Shared;
+using Microsoft.VisualBasic.Devices;
 using MySqlX.XDevAPI;
 using Org.BouncyCastle.Tls;
 using System;
@@ -10,7 +12,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ApplicationSenSoutenance.Shared;
 
 namespace ApplicationSenSoutenance.Views.Parametre
 {
@@ -81,6 +82,8 @@ namespace ApplicationSenSoutenance.Views.Parametre
             dgProfesseur.Columns["IdUtilisateur"].Visible = false;
 
             dgProfesseur.Columns["MotDePasse"].Visible = false;
+
+            
         }
 
         private void btnRemove_Click(object sender, EventArgs e)

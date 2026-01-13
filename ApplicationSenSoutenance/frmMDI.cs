@@ -156,5 +156,16 @@ namespace ApplicationSenSoutenance
         {
             Application.Exit();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            fermer();
+            // Code à mettre dans l'événement clic de votre menu par exemple
+            frmDepartement f = new frmDepartement();
+            f.MdiParent = this; // 'this' désigne le formulaire frmMDI (le parent)
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
+
+        }
     }
 }

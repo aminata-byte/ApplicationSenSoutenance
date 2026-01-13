@@ -93,6 +93,16 @@ namespace ApplicationSenSoutenance.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lobtention_du_diplome_1_ {
+            get {
+                object obj = ResourceManager.GetObject("lobtention-du-diplome(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap professeur_1_ {
             get {
                 object obj = ResourceManager.GetObject("professeur(1)", resourceCulture);
