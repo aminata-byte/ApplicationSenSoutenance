@@ -38,6 +38,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.panelContenu = new System.Windows.Forms.Panel();
+            this.btnSearch = new System.Windows.Forms.Button();
             btnRemove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgAnneeAcademique)).BeginInit();
             this.panelContenu.SuspendLayout();
@@ -48,7 +49,7 @@
             btnRemove.BackColor = System.Drawing.Color.DarkRed;
             btnRemove.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             btnRemove.ForeColor = System.Drawing.Color.LavenderBlush;
-            btnRemove.Location = new System.Drawing.Point(675, 138);
+            btnRemove.Location = new System.Drawing.Point(577, 138);
             btnRemove.Name = "btnRemove";
             btnRemove.Size = new System.Drawing.Size(108, 37);
             btnRemove.TabIndex = 6;
@@ -79,7 +80,7 @@
             this.BtnSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnSelect.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSelect.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnSelect.Location = new System.Drawing.Point(259, 139);
+            this.BtnSelect.Location = new System.Drawing.Point(161, 139);
             this.BtnSelect.Name = "BtnSelect";
             this.BtnSelect.Size = new System.Drawing.Size(110, 36);
             this.BtnSelect.TabIndex = 3;
@@ -131,7 +132,7 @@
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.SizeNESW;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAdd.Location = new System.Drawing.Point(399, 139);
+            this.btnAdd.Location = new System.Drawing.Point(301, 139);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(108, 36);
             this.btnAdd.TabIndex = 4;
@@ -144,7 +145,7 @@
             this.btnEdit.BackColor = System.Drawing.Color.Teal;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEdit.Location = new System.Drawing.Point(537, 136);
+            this.btnEdit.Location = new System.Drawing.Point(439, 136);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(108, 39);
             this.btnEdit.TabIndex = 5;
@@ -155,6 +156,7 @@
             // panelContenu
             // 
             this.panelContenu.BackColor = System.Drawing.Color.White;
+            this.panelContenu.Controls.Add(this.btnSearch);
             this.panelContenu.Controls.Add(this.txtLibelleAnneeAcademique);
             this.panelContenu.Controls.Add(btnRemove);
             this.panelContenu.Controls.Add(this.dgAnneeAcademique);
@@ -170,6 +172,16 @@
             this.panelContenu.Size = new System.Drawing.Size(819, 450);
             this.panelContenu.TabIndex = 8;
             this.panelContenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenu_Paint);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(702, 83);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(96, 23);
+            this.btnSearch.TabIndex = 21;
+            this.btnSearch.Text = "&Rechercher";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // frmAnneeAcademique
             // 
@@ -199,5 +211,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Panel panelContenu;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

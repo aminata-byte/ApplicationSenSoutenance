@@ -151,6 +151,7 @@
             this.txtRanneeAcademique.Name = "txtRanneeAcademique";
             this.txtRanneeAcademique.Size = new System.Drawing.Size(172, 20);
             this.txtRanneeAcademique.TabIndex = 18;
+            this.txtRanneeAcademique.TextChanged += new System.EventHandler(this.txtRanneeAcademique_TextChanged);
             // 
             // label2
             // 

@@ -65,7 +65,7 @@ namespace ApplicationSenSoutenance.Views.Parametre
             // et affiche un message d'erreur à l'utilisateur
             catch (Exception ex)
             {
-                MessageBox.Show("Erreur lors de la suppression: " + ex.Message,
+                MessageBox.Show("Erreur lors de la suppression: " + ex.Message,// Message détaillant l'erreur
                                 "Erreur",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
@@ -221,6 +221,11 @@ namespace ApplicationSenSoutenance.Views.Parametre
                 f.Show();
                 f.WindowState = FormWindowState.Maximized;
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

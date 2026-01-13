@@ -155,5 +155,10 @@ namespace ApplicationSenSoutenance.Views.Parametre
         {
 
         }
+
+        private void txtRanneeAcademique_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
