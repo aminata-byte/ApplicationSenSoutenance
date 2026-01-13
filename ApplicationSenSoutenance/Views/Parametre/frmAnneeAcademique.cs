@@ -61,6 +61,8 @@ namespace ApplicationSenSoutenance.Views.Parametre
                                 MessageBoxIcon.Information);
                 Effacer();
             }
+            // Capture toute exception pouvant survenir lors de la suppression
+            // et affiche un message d'erreur à l'utilisateur
             catch (Exception ex)
             {
                 MessageBox.Show("Erreur lors de la suppression: " + ex.Message,
@@ -107,26 +109,52 @@ namespace ApplicationSenSoutenance.Views.Parametre
         
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            // Création d’un nouvel objet AnneeAcademique
+            // et affectation des valeurs saisies dans le formulaire
             AnneeAcademique anneeAcademique = new AnneeAcademique()
             {
+                // Libellé de l'année académique saisi par l'utilisateur
                 LibelleAnneeAcademique = txtLibelleAnneeAcademique.Text,
+
+                // Valeur numérique de l'année académique
                 AnneeAcademiqueVal = int.Parse(txtAnneeAcademiqueVal.Text)
             };
-            bd.anneeAcademiques.Add(anneeAcademique);  
-            bd.SaveChanges(); 
+
+            // Ajout de la nouvelle année académique dans la base de données
+            bd.anneeAcademiques.Add(anneeAcademique);
+
+            // Enregistrement des données dans la base
+            bd.SaveChanges();
+
+            // Réinitialisation des champs du formulaire après l'ajout
             Effacer();
+
         }
-        
+
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            // Récupère l'identifiant de l'année académique sélectionnée
+            // à partir de la première colonne du DataGridView
             int id = int.Parse(dgAnneeAcademique.CurrentRow.Cells[0].Value.ToString());
+
+            // Recherche dans la base de données l'année académique
+            // correspondant à l'identifiant récupéré
             AnneeAcademique anneeAcademique = bd.anneeAcademiques.Find(id);
+
+            // Met à jour le libellé de l'année académique
             anneeAcademique.LibelleAnneeAcademique = txtLibelleAnneeAcademique.Text;
+
+            // Met à jour la valeur numérique de l'année académique
             anneeAcademique.AnneeAcademiqueVal = int.Parse(txtAnneeAcademiqueVal.Text);
+
+            // Enregistre les modifications dans la base de données
             bd.SaveChanges();
+
+            // Vide les champs du formulaire après la mise à jour
             Effacer();
+
         }
-        
+
         private void BtnSelect_Click(object sender, EventArgs e)
         {
             txtLibelleAnneeAcademique.Text = dgAnneeAcademique.CurrentRow.Cells[1].Value.ToString();

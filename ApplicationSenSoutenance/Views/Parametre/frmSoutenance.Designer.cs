@@ -31,7 +31,7 @@
             System.Windows.Forms.Button btnRemove;
             this.panelContenu = new System.Windows.Forms.Panel();
             this.BtnSelect = new System.Windows.Forms.Button();
-            this.dgMemoires = new System.Windows.Forms.DataGridView();
+            this.dgSoutenances = new System.Windows.Forms.DataGridView();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.cmbMention = new System.Windows.Forms.ComboBox();
@@ -48,7 +48,7 @@
             this.cmbMemoire = new System.Windows.Forms.ComboBox();
             btnRemove = new System.Windows.Forms.Button();
             this.panelContenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgMemoires)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgSoutenances)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContenu
@@ -61,7 +61,7 @@
             this.panelContenu.Controls.Add(this.dtpDateSoutenance);
             this.panelContenu.Controls.Add(this.label3);
             this.panelContenu.Controls.Add(this.BtnSelect);
-            this.panelContenu.Controls.Add(this.dgMemoires);
+            this.panelContenu.Controls.Add(this.dgSoutenances);
             this.panelContenu.Controls.Add(btnRemove);
             this.panelContenu.Controls.Add(this.btnEdit);
             this.panelContenu.Controls.Add(this.btnAdd);
@@ -76,6 +76,7 @@
             this.panelContenu.Name = "panelContenu";
             this.panelContenu.Size = new System.Drawing.Size(1219, 450);
             this.panelContenu.TabIndex = 1;
+            this.panelContenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenu_Paint);
             // 
             // BtnSelect
             // 
@@ -89,21 +90,22 @@
             this.BtnSelect.TabIndex = 4;
             this.BtnSelect.Text = "&Selectionner";
             this.BtnSelect.UseVisualStyleBackColor = false;
+            this.BtnSelect.Click += new System.EventHandler(this.BtnSelect_Click);
             // 
-            // dgMemoires
+            // dgSoutenances
             // 
-            this.dgMemoires.AllowUserToAddRows = false;
-            this.dgMemoires.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgMemoires.BackgroundColor = System.Drawing.Color.White;
-            this.dgMemoires.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgMemoires.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgMemoires.Location = new System.Drawing.Point(0, 209);
-            this.dgMemoires.Name = "dgMemoires";
-            this.dgMemoires.ReadOnly = true;
-            this.dgMemoires.RowHeadersVisible = false;
-            this.dgMemoires.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgMemoires.Size = new System.Drawing.Size(1219, 241);
-            this.dgMemoires.TabIndex = 8;
+            this.dgSoutenances.AllowUserToAddRows = false;
+            this.dgSoutenances.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgSoutenances.BackgroundColor = System.Drawing.Color.White;
+            this.dgSoutenances.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgSoutenances.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgSoutenances.Location = new System.Drawing.Point(0, 209);
+            this.dgSoutenances.Name = "dgSoutenances";
+            this.dgSoutenances.ReadOnly = true;
+            this.dgSoutenances.RowHeadersVisible = false;
+            this.dgSoutenances.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgSoutenances.Size = new System.Drawing.Size(1219, 241);
+            this.dgSoutenances.TabIndex = 8;
             // 
             // btnRemove
             // 
@@ -116,6 +118,7 @@
             btnRemove.TabIndex = 7;
             btnRemove.Text = "&Supprimer";
             btnRemove.UseVisualStyleBackColor = false;
+            btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnEdit
             // 
@@ -128,6 +131,7 @@
             this.btnEdit.TabIndex = 6;
             this.btnEdit.Text = "&Modifier";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -141,17 +145,12 @@
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "&Ajouter";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // cmbMention
             // 
             this.cmbMention.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMention.FormattingEnabled = true;
-            this.cmbMention.Items.AddRange(new object[] {
-            "Passable",
-            "Assez Bien",
-            "Bien",
-            "Très Bien",
-            "Excellent"});
             this.cmbMention.Location = new System.Drawing.Point(558, 69);
             this.cmbMention.Name = "cmbMention";
             this.cmbMention.Size = new System.Drawing.Size(170, 21);
@@ -171,14 +170,11 @@
             // 
             this.cmbResultat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbResultat.FormattingEnabled = true;
-            this.cmbResultat.Items.AddRange(new object[] {
-            "Admis",
-            "Ajourné",
-            "Refusé"});
             this.cmbResultat.Location = new System.Drawing.Point(363, 69);
             this.cmbResultat.Name = "cmbResultat";
             this.cmbResultat.Size = new System.Drawing.Size(170, 21);
             this.cmbResultat.TabIndex = 2;
+            this.cmbResultat.SelectedIndexChanged += new System.EventHandler(this.cmbResultat_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -277,7 +273,7 @@
             this.Load += new System.EventHandler(this.frmSoutenance_Load);
             this.panelContenu.ResumeLayout(false);
             this.panelContenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgMemoires)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgSoutenances)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -286,7 +282,7 @@
 
         private System.Windows.Forms.Panel panelContenu;
         private System.Windows.Forms.Button BtnSelect;
-        private System.Windows.Forms.DataGridView dgMemoires;
+        private System.Windows.Forms.DataGridView dgSoutenances;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cmbMention;
