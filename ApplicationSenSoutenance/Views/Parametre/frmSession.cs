@@ -17,6 +17,7 @@ namespace ApplicationSenSoutenance.Views.Parametre
         public frmSession()
         {
             InitializeComponent();
+            
         }
 
         BdSenSoutenanceContext db = new BdSenSoutenanceContext();
@@ -52,14 +53,22 @@ namespace ApplicationSenSoutenance.Views.Parametre
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (txtSession.Text.Trim() != "")
+            {
+                Session session = new Session();
+                session.LibelleSession = txtSession.Text;
+                session.IdAnneeAcademique = int.Parse(cbbAnneeAcademique.SelectedValue.ToString());
 
-            Session session = new Session();
-            session.LibelleSession = txtSession.Text;
-            session.IdAnneeAcademique = int.Parse(cbbAnneeAcademique.SelectedValue.ToString());
+                db.sessions.Add(session);
+                db.SaveChanges();
+                Effacer();
+            }
+            else
+            {
+                MessageBox.Show("Erreur ! Veuillez remplir correctement les champs");
+            }
 
-            db.sessions.Add(session);
-            db.SaveChanges();
-            Effacer();
+           
         }
 
 
@@ -90,32 +99,73 @@ namespace ApplicationSenSoutenance.Views.Parametre
             cbbAnneeAcademique.ValueMember = "Value";
             txtSession.Focus();
         }
-
+       public bool btnSlectPresse = false;
         private void BtnSelect_Click(object sender, EventArgs e)
         {
-            int? id = int.Parse(dgSession.CurrentRow.Cells[0].Value.ToString());
-            Session session = db.sessions.Find(id);
-            txtSession.Text = session.LibelleSession;
-            cbbAnneeAcademique.SelectedValue = session.IdAnneeAcademique;
+            
+            
+                btnSlectPresse = true;
+           if(dgSession.CurrentRow != null)
+            {
+                //
+                int? id = int.Parse(dgSession.CurrentRow.Cells[0].Value.ToString());
+                Session session = db.sessions.Find(id);
+                txtSession.Text = session.LibelleSession;
+                cbbAnneeAcademique.SelectedValue = session.IdAnneeAcademique;
+            }
+            else
+            {
+                MessageBox.Show("Erreur ! Aucune ligne selectionee ");
+            }
+            
+
+            
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            int id = (int)dgSession.CurrentRow.Cells["IdSession"].Value;
-            Session session = db.sessions.Find(id);
-            session.LibelleSession = txtSession.Text;
-            session.IdAnneeAcademique = int.Parse(cbbAnneeAcademique.SelectedValue.ToString());
-            db.SaveChanges();
-            Effacer();
+            if (btnSlectPresse==true)
+            {
+
+                if (txtSession.Text.Trim()!="" && cbbAnneeAcademique.Text.Trim()!="")
+                {
+                    int id = (int)dgSession.CurrentRow.Cells["IdSession"].Value;
+                    Session session = db.sessions.Find(id);
+                    session.LibelleSession = txtSession.Text;
+                    session.IdAnneeAcademique = int.Parse(cbbAnneeAcademique.SelectedValue.ToString());
+                    db.SaveChanges();
+                    Effacer();
+                }
+                else
+                {
+                    MessageBox.Show("Erreur ! Veuillez bien remplir les champs ");
+                }
+
+               
+            }
+            else
+            {
+                MessageBox.Show("Erreur ! Aucue ligne selectionee ");
+
+            }
+
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            int id = (int)dgSession.CurrentRow.Cells["IdSession"].Value;
-            Session session = db.sessions.Find(id);
-            db.sessions.Remove(session);
-            db.SaveChanges();
-            Effacer();
+           if(dgSession.CurrentRow!=null)
+            {
+                int id = (int)dgSession.CurrentRow.Cells["IdSession"].Value;
+                Session session = db.sessions.Find(id);
+                db.sessions.Remove(session);
+                db.SaveChanges();
+                Effacer();
+            }
+            else
+            {
+                MessageBox.Show("Erreur ! Tableau Vide ");
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -152,6 +202,16 @@ namespace ApplicationSenSoutenance.Views.Parametre
             dgSession.Columns["IdAnneeAcademique"].Visible = false;
         }
         private void cbbAnneeAcademique_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgSession_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void ttx_Click(object sender, EventArgs e)
         {
 
         }

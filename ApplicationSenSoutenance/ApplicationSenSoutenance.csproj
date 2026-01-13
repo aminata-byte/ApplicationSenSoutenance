@@ -132,6 +132,7 @@
     <Compile Include="Models\BdSenSoutenanceContext.cs" />
     <Compile Include="Models\Candidat.cs" />
     <Compile Include="Models\ChefDepartement.cs" />
+    <Compile Include="Models\data\BdSenSoutenanceInitializer.cs" />
     <Compile Include="Models\Departement.cs" />
     <Compile Include="Models\ListItem.cs" />
     <Compile Include="Models\Memoire.cs" />
@@ -210,6 +211,9 @@
     </Compile>
     <EmbeddedResource Include="Views\Parametre\frmAnneeAcademique.resx">
       <DependentUpon>frmAnneeAcademique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Parametre\frmChefDeDepartement.resx">
+      <DependentUpon>frmChefDeDepartement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Parametre\frmProfesseur.resx">
       <DependentUpon>frmProfesseur.cs</DependentUpon>
