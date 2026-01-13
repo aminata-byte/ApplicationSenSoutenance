@@ -174,5 +174,15 @@ namespace ApplicationSenSoutenance
         {
             Application.Exit();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            fermer();
+
+            frmSoutenance f = new frmSoutenance();
+            f.MdiParent = this;
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
+        }
     }
 }

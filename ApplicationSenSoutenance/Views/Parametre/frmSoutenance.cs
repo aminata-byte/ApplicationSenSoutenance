@@ -16,5 +16,10 @@ namespace ApplicationSenSoutenance.Views.Parametre
         {
             InitializeComponent();
         }
+
+        private void frmSoutenance_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

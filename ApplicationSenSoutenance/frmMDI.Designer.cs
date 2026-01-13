@@ -46,6 +46,7 @@
             this.btnAnneeAcademique = new System.Windows.Forms.Button();
             this.lblTitreMenu = new System.Windows.Forms.Label();
             this.BtnQuitter = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -164,6 +165,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
+            this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.BtnQuitter);
             this.panelMenu.Controls.Add(this.btnMemoire);
             this.panelMenu.Controls.Add(this.btnAnneeAcademique);
@@ -231,6 +233,21 @@
             this.BtnQuitter.UseVisualStyleBackColor = false;
             this.BtnQuitter.Click += new System.EventHandler(this.BtnQuitter_Click);
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 94);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(230, 35);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Soutenance";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // frmMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,5 +291,6 @@
         private System.Windows.Forms.Button btnAnneeAcademique;
         private System.Windows.Forms.Label lblTitreMenu;
         private System.Windows.Forms.Button BtnQuitter;
+        private System.Windows.Forms.Button button1;
     }
 }
