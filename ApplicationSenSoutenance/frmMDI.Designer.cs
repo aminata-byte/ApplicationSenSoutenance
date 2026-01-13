@@ -28,167 +28,187 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.actionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.seDeconnecterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.parametreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.anneeAcademiqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.professeurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.candidatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chefDepartementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.memoireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.soutenanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.departementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.candidatTxt = new System.Windows.Forms.Label();
+            this.ProfesseurTxt = new System.Windows.Forms.Label();
+            this.Titre = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // panel1
             // 
-            this.menuStrip1.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
-            this.menuStrip1.BackColor = System.Drawing.Color.DarkViolet;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.actionToolStripMenuItem,
-            this.parametreToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 29);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.candidatTxt);
+            this.panel1.Controls.Add(this.ProfesseurTxt);
+            this.panel1.Controls.Add(this.Titre);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(0, -86);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(356, 1137);
+            this.panel1.TabIndex = 28;
             // 
-            // actionToolStripMenuItem
+            // label2
             // 
-            this.actionToolStripMenuItem.BackColor = System.Drawing.Color.DarkViolet;
-            this.actionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.seDeconnecterToolStripMenuItem,
-            this.quitterToolStripMenuItem});
-            this.actionToolStripMenuItem.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actionToolStripMenuItem.Name = "actionToolStripMenuItem";
-            this.actionToolStripMenuItem.Size = new System.Drawing.Size(65, 25);
-            this.actionToolStripMenuItem.Text = "&Action";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(62, 976);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 30);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "&Quitter";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // seDeconnecterToolStripMenuItem
+            // label1
             // 
-            this.seDeconnecterToolStripMenuItem.Name = "seDeconnecterToolStripMenuItem";
-            this.seDeconnecterToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.seDeconnecterToolStripMenuItem.Text = "&Se deconnecter";
-            this.seDeconnecterToolStripMenuItem.Click += new System.EventHandler(this.seDeconnecterToolStripMenuItem_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(216, 975);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(182, 30);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "&Se deconnecter";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // quitterToolStripMenuItem
+            // pictureBox5
             // 
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.quitterToolStripMenuItem.Text = "&Quitter";
-            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
+            this.pictureBox5.Image = global::ApplicationSenSoutenance.Properties.Resources.eteindre;
+            this.pictureBox5.Location = new System.Drawing.Point(3, 945);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(56, 80);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 7;
+            this.pictureBox5.TabStop = false;
             // 
-            // parametreToolStripMenuItem
+            // pictureBox4
             // 
-            this.parametreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.anneeAcademiqueToolStripMenuItem,
-            this.sessionToolStripMenuItem,
-            this.professeurToolStripMenuItem,
-            this.candidatToolStripMenuItem,
-            this.chefDepartementToolStripMenuItem,
-            this.memoireToolStripMenuItem,
-            this.soutenanceToolStripMenuItem,
-            this.departementToolStripMenuItem});
-            this.parametreToolStripMenuItem.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.parametreToolStripMenuItem.Name = "parametreToolStripMenuItem";
-            this.parametreToolStripMenuItem.Size = new System.Drawing.Size(97, 25);
-            this.parametreToolStripMenuItem.Text = "&Parametre";
-            this.parametreToolStripMenuItem.Click += new System.EventHandler(this.parametreToolStripMenuItem_Click);
+            this.pictureBox4.Image = global::ApplicationSenSoutenance.Properties.Resources.se_deconnecter;
+            this.pictureBox4.Location = new System.Drawing.Point(166, 956);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(55, 69);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
             // 
-            // anneeAcademiqueToolStripMenuItem
+            // candidatTxt
             // 
-            this.anneeAcademiqueToolStripMenuItem.Name = "anneeAcademiqueToolStripMenuItem";
-            this.anneeAcademiqueToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.anneeAcademiqueToolStripMenuItem.Text = "&Annee academique";
-            this.anneeAcademiqueToolStripMenuItem.Click += new System.EventHandler(this.anneeAcademiqueToolStripMenuItem_Click);
+            this.candidatTxt.AutoSize = true;
+            this.candidatTxt.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.candidatTxt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.candidatTxt.Location = new System.Drawing.Point(80, 376);
+            this.candidatTxt.Name = "candidatTxt";
+            this.candidatTxt.Size = new System.Drawing.Size(114, 30);
+            this.candidatTxt.TabIndex = 5;
+            this.candidatTxt.Text = "Candidat";
+            this.candidatTxt.Click += new System.EventHandler(this.candidatTxt_Click);
             // 
-            // sessionToolStripMenuItem
+            // ProfesseurTxt
             // 
-            this.sessionToolStripMenuItem.Name = "sessionToolStripMenuItem";
-            this.sessionToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.sessionToolStripMenuItem.Text = "&Session";
-            this.sessionToolStripMenuItem.Click += new System.EventHandler(this.sessionToolStripMenuItem_Click);
+            this.ProfesseurTxt.AutoSize = true;
+            this.ProfesseurTxt.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProfesseurTxt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ProfesseurTxt.Location = new System.Drawing.Point(80, 298);
+            this.ProfesseurTxt.Name = "ProfesseurTxt";
+            this.ProfesseurTxt.Size = new System.Drawing.Size(130, 30);
+            this.ProfesseurTxt.TabIndex = 4;
+            this.ProfesseurTxt.Text = "Professeur";
+            this.ProfesseurTxt.Click += new System.EventHandler(this.ProfesseurTxt_Click);
             // 
-            // professeurToolStripMenuItem
+            // Titre
             // 
-            this.professeurToolStripMenuItem.Name = "professeurToolStripMenuItem";
-            this.professeurToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.professeurToolStripMenuItem.Text = "&Professeur";
-            this.professeurToolStripMenuItem.Click += new System.EventHandler(this.professeurToolStripMenuItem_Click);
+            this.Titre.AutoSize = true;
+            this.Titre.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Titre.Location = new System.Drawing.Point(45, 175);
+            this.Titre.Name = "Titre";
+            this.Titre.Size = new System.Drawing.Size(288, 30);
+            this.Titre.TabIndex = 3;
+            this.Titre.Text = "Gestion des soutenances";
             // 
-            // candidatToolStripMenuItem
+            // pictureBox3
             // 
-            this.candidatToolStripMenuItem.Name = "candidatToolStripMenuItem";
-            this.candidatToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.candidatToolStripMenuItem.Text = "&Candidat";
-            this.candidatToolStripMenuItem.Click += new System.EventHandler(this.candidatToolStripMenuItem_Click);
+            this.pictureBox3.Image = global::ApplicationSenSoutenance.Properties.Resources.diplome_1_;
+            this.pictureBox3.Location = new System.Drawing.Point(136, 83);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(74, 89);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
             // 
-            // chefDepartementToolStripMenuItem
+            // pictureBox2
             // 
-            this.chefDepartementToolStripMenuItem.Name = "chefDepartementToolStripMenuItem";
-            this.chefDepartementToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.chefDepartementToolStripMenuItem.Text = "&Chef de departement";
-            this.chefDepartementToolStripMenuItem.Click += new System.EventHandler(this.chefDepartementToolStripMenuItem_Click);
+            this.pictureBox2.Image = global::ApplicationSenSoutenance.Properties.Resources.diplome;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 357);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(74, 70);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
-            // memoireToolStripMenuItem
+            // pictureBox1
             // 
-            this.memoireToolStripMenuItem.Name = "memoireToolStripMenuItem";
-            this.memoireToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.memoireToolStripMenuItem.Text = "&Memoire";
-            this.memoireToolStripMenuItem.Click += new System.EventHandler(this.memoireToolStripMenuItem_Click);
-            // 
-            // soutenanceToolStripMenuItem
-            // 
-            this.soutenanceToolStripMenuItem.Name = "soutenanceToolStripMenuItem";
-            this.soutenanceToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.soutenanceToolStripMenuItem.Text = "&Soutenance";
-            this.soutenanceToolStripMenuItem.Click += new System.EventHandler(this.soutenanceToolStripMenuItem_Click);
-            // 
-            // departementToolStripMenuItem
-            // 
-            this.departementToolStripMenuItem.Name = "departementToolStripMenuItem";
-            this.departementToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.departementToolStripMenuItem.Text = "&Departement";
-            this.departementToolStripMenuItem.Click += new System.EventHandler(this.departementToolStripMenuItem_Click);
+            this.pictureBox1.Image = global::ApplicationSenSoutenance.Properties.Resources.professeur_1_;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 262);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(74, 89);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // frmMDI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 939);
             this.ControlBox = false;
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmMDI";
             this.Text = "Sen Soutenance ::";
             this.Load += new System.EventHandler(this.frmMDI_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem actionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem seDeconnecterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem parametreToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem anneeAcademiqueToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sessionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem professeurToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem candidatToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem chefDepartementToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem memoireToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem soutenanceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem departementToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label candidatTxt;
+        private System.Windows.Forms.Label ProfesseurTxt;
+        private System.Windows.Forms.Label Titre;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

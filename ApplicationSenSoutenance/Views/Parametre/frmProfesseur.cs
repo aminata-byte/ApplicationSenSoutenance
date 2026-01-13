@@ -16,6 +16,18 @@ namespace ApplicationSenSoutenance.Views.Parametre
 {
     public partial class frmProfesseur : Form
     {
+
+        private void fermer()
+        {
+            Form[] charr = this.MdiChildren;
+
+            // Pour chaque formulaire enfant, on le ferme
+            foreach (Form chform in charr)
+            {
+                // chform.WindowState = FormWindowState.Maximized; (optionnel)
+                chform.Close();
+            }
+        }
         public frmProfesseur()
         {
             InitializeComponent();
@@ -141,6 +153,54 @@ namespace ApplicationSenSoutenance.Views.Parametre
         }
 
         private void dgProfesseur_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+      
+
+        private void candidatTxt_Click(object sender, EventArgs e)
+        {
+            fermer();
+            // Code à mettre dans l'événement clic de votre menu par exemple
+            frmCandidat f = new frmCandidat();
+            f.MdiParent = this; // 'this' désigne le formulaire frmMDI (le parent)
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
+
+        }
+
+        private void ProfesseurTxt_Click(object sender, EventArgs e)
+        {
+            fermer();
+            // Code à mettre dans l'événement clic de votre menu par exemple
+            frmProfesseur f = new frmProfesseur();
+            f.MdiParent = this; // 'this' désigne le formulaire frmMDI (le parent)
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRSpecialite_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRNom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }
