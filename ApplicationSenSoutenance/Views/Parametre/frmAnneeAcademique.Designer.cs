@@ -70,7 +70,7 @@
             this.dgAnneeAcademique.RowHeadersVisible = false;
             this.dgAnneeAcademique.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgAnneeAcademique.Size = new System.Drawing.Size(819, 246);
-            this.dgAnneeAcademique.TabIndex = 0;
+            this.dgAnneeAcademique.TabIndex = 7;
             this.dgAnneeAcademique.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgAnneeAcademique_CellContentClick);
             // 
             // BtnSelect

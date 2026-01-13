@@ -53,7 +53,7 @@
             btnRemove.Location = new System.Drawing.Point(674, 172);
             btnRemove.Name = "btnRemove";
             btnRemove.Size = new System.Drawing.Size(108, 37);
-            btnRemove.TabIndex = 10;
+            btnRemove.TabIndex = 7;
             btnRemove.Text = "&Supprimer";
             btnRemove.UseVisualStyleBackColor = false;
             btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
@@ -91,7 +91,7 @@
             this.dgMemoires.RowHeadersVisible = false;
             this.dgMemoires.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgMemoires.Size = new System.Drawing.Size(800, 241);
-            this.dgMemoires.TabIndex = 11;
+            this.dgMemoires.TabIndex = 8;
             // 
             // btnEdit
             // 
@@ -101,7 +101,7 @@
             this.btnEdit.Location = new System.Drawing.Point(536, 170);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(108, 39);
-            this.btnEdit.TabIndex = 9;
+            this.btnEdit.TabIndex = 6;
             this.btnEdit.Text = "&Modifier";
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -115,7 +115,7 @@
             this.btnAdd.Location = new System.Drawing.Point(398, 173);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(108, 36);
-            this.btnAdd.TabIndex = 8;
+            this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "&Ajouter";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -126,7 +126,7 @@
             this.cmbSession.Location = new System.Drawing.Point(627, 103);
             this.cmbSession.Name = "cmbSession";
             this.cmbSession.Size = new System.Drawing.Size(170, 21);
-            this.cmbSession.TabIndex = 5;
+            this.cmbSession.TabIndex = 3;
             // 
             // label2
             // 
@@ -144,7 +144,7 @@
             this.cmbAnneeAcademique.Location = new System.Drawing.Point(423, 103);
             this.cmbAnneeAcademique.Name = "cmbAnneeAcademique";
             this.cmbAnneeAcademique.Size = new System.Drawing.Size(170, 21);
-            this.cmbAnneeAcademique.TabIndex = 3;
+            this.cmbAnneeAcademique.TabIndex = 2;
             // 
             // label1
             // 
@@ -163,6 +163,7 @@
             this.txtSujetMemoire.Name = "txtSujetMemoire";
             this.txtSujetMemoire.Size = new System.Drawing.Size(170, 30);
             this.txtSujetMemoire.TabIndex = 1;
+            this.txtSujetMemoire.TextChanged += new System.EventHandler(this.txtSujetMemoire_TextChanged);
             // 
             // Sujet
             // 
@@ -184,7 +185,7 @@
             this.BtnSelect.Location = new System.Drawing.Point(268, 173);
             this.BtnSelect.Name = "BtnSelect";
             this.BtnSelect.Size = new System.Drawing.Size(110, 36);
-            this.BtnSelect.TabIndex = 12;
+            this.BtnSelect.TabIndex = 4;
             this.BtnSelect.Text = "&Selectionner";
             this.BtnSelect.UseVisualStyleBackColor = false;
             this.BtnSelect.Click += new System.EventHandler(this.BtnSelect_Click_1);
@@ -194,6 +195,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.panelContenu);
             this.Name = "frmMemoire";
             this.Text = "frmMemoire";

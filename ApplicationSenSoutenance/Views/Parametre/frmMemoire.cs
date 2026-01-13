@@ -242,5 +242,10 @@ namespace ApplicationSenSoutenance.Views.Parametre
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void txtSujetMemoire_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

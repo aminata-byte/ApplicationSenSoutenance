@@ -16,7 +16,7 @@ namespace ApplicationSenSoutenance
         {
             InitializeComponent();
             // Plein écran
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
 
             // Garder les bordures mais maximiser
             this.StartPosition = FormStartPosition.CenterScreen;
