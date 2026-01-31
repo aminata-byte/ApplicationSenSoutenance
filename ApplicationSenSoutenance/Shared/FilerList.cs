@@ -36,5 +36,25 @@ namespace ApplicationSenSoutenance.Shared
             }
             return laListe;
         }
+        public List<ListItem> FillDepartement()
+        {
+            List<ListItem> laListe = new List<ListItem>();
+            var liste = bd.departements.ToList();
+            laListe.Add(new ListItem
+            {
+                Value = null,
+                Text = "Sélectionner"
+            });
+            foreach (var t in liste)
+            {
+                var item = new ListItem
+                {
+                    Value = t.IdDepartement.ToString(),
+                    Text = t.LibelleDepartement.ToString()
+                };
+                laListe.Add(item);
+            }
+            return laListe;
+        }
     }
 }

@@ -25,5 +25,6 @@ namespace ApplicationSenSoutenance.Models
         public DbSet<Candidat> candidats { get; set; }
         public DbSet<Professeur> professeurs { get; set; }
         public DbSet<Departement> departements { get; set; }
+
     }
 }
