@@ -69,6 +69,7 @@ namespace ApplicationSenSoutenance.Views.Parametre
 
 
 
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

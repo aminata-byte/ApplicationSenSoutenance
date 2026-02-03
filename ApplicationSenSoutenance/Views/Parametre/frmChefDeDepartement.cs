@@ -233,6 +233,15 @@ namespace ApplicationSenSoutenance.Views.Parametre
         }
 
         private void frmChefDeDepartement_Load(object sender, EventArgs e)
+
+        {
+            cbbADepartement.DataSource = db.departements.ToList();
+            cbbADepartement.DisplayMember = "LibelleDepartement";
+            cbbADepartement.ValueMember = "IdDepartement";
+            cbbADepartement.SelectedIndex = -1; // Aucune sélection par défaut
+        }
+
+        private void cbbADepartement_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

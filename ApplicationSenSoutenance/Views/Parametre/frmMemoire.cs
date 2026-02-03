@@ -247,5 +247,20 @@ namespace ApplicationSenSoutenance.Views.Parametre
         {
 
         }
+
+        private void cmbAnneeAcademique_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbSession_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelContenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

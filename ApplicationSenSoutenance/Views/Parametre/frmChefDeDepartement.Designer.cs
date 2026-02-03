@@ -425,6 +425,7 @@
             this.cbbADepartement.Name = "cbbADepartement";
             this.cbbADepartement.Size = new System.Drawing.Size(594, 28);
             this.cbbADepartement.TabIndex = 54;
+            this.cbbADepartement.SelectedIndexChanged += new System.EventHandler(this.cbbADepartement_SelectedIndexChanged);
             // 
             // txtValeur
             // 

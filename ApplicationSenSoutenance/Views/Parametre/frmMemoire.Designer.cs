@@ -78,6 +78,7 @@
             this.panelContenu.Name = "panelContenu";
             this.panelContenu.Size = new System.Drawing.Size(1744, 692);
             this.panelContenu.TabIndex = 0;
+            this.panelContenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenu_Paint);
             // 
             // BtnSelect
             // 
@@ -148,6 +149,7 @@
             this.cmbSession.Name = "cmbSession";
             this.cmbSession.Size = new System.Drawing.Size(253, 28);
             this.cmbSession.TabIndex = 3;
+            this.cmbSession.SelectedIndexChanged += new System.EventHandler(this.cmbSession_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -168,6 +170,7 @@
             this.cmbAnneeAcademique.Name = "cmbAnneeAcademique";
             this.cmbAnneeAcademique.Size = new System.Drawing.Size(253, 28);
             this.cmbAnneeAcademique.TabIndex = 2;
+            this.cmbAnneeAcademique.SelectedIndexChanged += new System.EventHandler(this.cmbAnneeAcademique_SelectedIndexChanged);
             // 
             // label1
             // 
