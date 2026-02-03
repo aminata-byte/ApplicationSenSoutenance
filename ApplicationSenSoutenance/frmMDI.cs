@@ -68,7 +68,8 @@ namespace ApplicationSenSoutenance
             f.WindowState = FormWindowState.Maximized;
         }
 
-      
+ 
+
 
         private void frmMDI_Load(object sender, EventArgs e)
         {
@@ -76,6 +77,11 @@ namespace ApplicationSenSoutenance
             this.Width = myComputer.Screen.Bounds.Width;
             this.Height = myComputer.Screen.Bounds.Height;
             this.Location = new Point(0, 0);
+
+            frmProfesseur f = new frmProfesseur();
+            f.MdiParent = this;
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
         }
 
        
@@ -130,9 +136,12 @@ namespace ApplicationSenSoutenance
             fermer();
             // Code à mettre dans l'événement clic de votre menu par exemple
             frmProfesseur f = new frmProfesseur();
-            f.MdiParent = this; // 'this' désigne le formulaire frmMDI (le parent)
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.MdiParent = this;
+            f.Dock = DockStyle.Fill;
             f.Show();
-            f.WindowState = FormWindowState.Maximized;
+
         }
 
         private void candidatTxt_Click(object sender, EventArgs e)
@@ -140,9 +149,15 @@ namespace ApplicationSenSoutenance
             fermer();
             // Code à mettre dans l'événement clic de votre menu par exemple
             frmCandidat f = new frmCandidat();
-            f.MdiParent = this; // 'this' désigne le formulaire frmMDI (le parent)
+
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.MdiParent = this;
+            f.Dock = DockStyle.Fill;
+
+
             f.Show();
-            f.WindowState = FormWindowState.Maximized;
+          
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -162,9 +177,14 @@ namespace ApplicationSenSoutenance
             fermer();
             // Code à mettre dans l'événement clic de votre menu par exemple
             frmDepartement f = new frmDepartement();
-            f.MdiParent = this; // 'this' désigne le formulaire frmMDI (le parent)
+
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.MdiParent = this;
+            f.Dock = DockStyle.Fill;
+
             f.Show();
-            f.WindowState = FormWindowState.Maximized;
+           
 
         }
 
@@ -173,9 +193,14 @@ namespace ApplicationSenSoutenance
             fermer();
             // Code à mettre dans l'événement clic de votre menu par exemple
             frmChefDeDepartement f = new frmChefDeDepartement();
-            f.MdiParent = this; // 'this' désigne le formulaire frmMDI (le parent)
+
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.MdiParent = this;
+            f.Dock = DockStyle.Fill;
+
             f.Show();
-            f.WindowState = FormWindowState.Maximized;
+            
 
         }
 
@@ -184,9 +209,14 @@ namespace ApplicationSenSoutenance
             fermer();
             // Code à mettre dans l'événement clic de votre menu par exemple
             frmSession f = new frmSession();
-            f.MdiParent = this; // 'this' désigne le formulaire frmMDI (le parent)
+
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.MdiParent = this;
+            f.Dock = DockStyle.Fill;
+
             f.Show();
-            f.WindowState = FormWindowState.Maximized;
+            
 
         }
     }

@@ -500,6 +500,7 @@
             this.Controls.Add(this.txtTexte);
             this.Name = "frmChefDeDepartement";
             this.Text = "frmChefDeDepartement";
+            this.Load += new System.EventHandler(this.frmChefDeDepartement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgChefDep)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

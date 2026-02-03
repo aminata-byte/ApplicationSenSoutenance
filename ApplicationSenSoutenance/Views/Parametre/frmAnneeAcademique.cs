@@ -16,6 +16,7 @@ namespace ApplicationSenSoutenance.Views.Parametre
         public frmAnneeAcademique()
         {
             InitializeComponent();
+
         }
         
         BdSenSoutenanceContext bd = new BdSenSoutenanceContext();

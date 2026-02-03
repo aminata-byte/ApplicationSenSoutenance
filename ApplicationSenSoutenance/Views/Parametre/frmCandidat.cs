@@ -28,6 +28,7 @@ namespace ApplicationSenSoutenance.Views.Parametre
         public frmCandidat()
         {
             InitializeComponent();
+           
         }
 
         BdSenSoutenanceContext db = new BdSenSoutenanceContext();

@@ -27,6 +27,7 @@ namespace ApplicationSenSoutenance.Views.Parametre
         public frmDepartement()
         {
             InitializeComponent();
+            
         }
 
         BdSenSoutenanceContext db = new BdSenSoutenanceContext();

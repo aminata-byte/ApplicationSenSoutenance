@@ -19,6 +19,7 @@ namespace ApplicationSenSoutenance.Views.Parametre
         public frmChefDeDepartement()
         {
             InitializeComponent();
+           
         }
         BdSenSoutenanceContext db = new BdSenSoutenanceContext();
         FilerList filer = new FilerList();
@@ -229,6 +230,11 @@ namespace ApplicationSenSoutenance.Views.Parametre
             // Masquer les colonnes ID
             dgChefDep.Columns["IdUtilisateur"].Visible = false;
             dgChefDep.Columns["IdDepartement"].Visible = false;
+        }
+
+        private void frmChefDeDepartement_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
