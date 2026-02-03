@@ -25,7 +25,7 @@ namespace ApplicationSenSoutenance
         /// methode permettant de fermer tout les forms dans le ParentMDI
         /// </summary>
 
-        private void fermer()
+        public void fermer()
         {
             Form[] charr = this.MdiChildren;
 
