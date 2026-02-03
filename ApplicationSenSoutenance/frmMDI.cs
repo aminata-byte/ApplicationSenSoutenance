@@ -68,15 +68,7 @@ namespace ApplicationSenSoutenance
             f.WindowState = FormWindowState.Maximized;
         }
 
-        private void professeurToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fermer();
-            // Code à mettre dans l'événement clic de votre menu par exemple
-            frmProfesseur f = new frmProfesseur();
-            f.MdiParent = this; // 'this' désigne le formulaire frmMDI (le parent)
-            f.Show();
-            f.WindowState = FormWindowState.Maximized;
-        }
+      
 
         private void frmMDI_Load(object sender, EventArgs e)
         {
@@ -93,15 +85,7 @@ namespace ApplicationSenSoutenance
             f.WindowState = FormWindowState.Maximized;
         }
 
-        private void candidatToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fermer();
-            // Code à mettre dans l'événement clic de votre menu par exemple
-            frmCandidat f = new frmCandidat();
-            f.MdiParent = this; // 'this' désigne le formulaire frmMDI (le parent)
-            f.Show();
-            f.WindowState = FormWindowState.Maximized;
-        }
+       
 
         private void chefDepartementToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -145,8 +129,49 @@ namespace ApplicationSenSoutenance
             f.WindowState = FormWindowState.Maximized;
         }
 
-        private void parametreToolStripMenuItem_Click(object sender, EventArgs e)
+     
+   
+
+        private void ProfesseurTxt_Click(object sender, EventArgs e)
         {
+            fermer();
+            // Code à mettre dans l'événement clic de votre menu par exemple
+            frmProfesseur f = new frmProfesseur();
+            f.MdiParent = this; // 'this' désigne le formulaire frmMDI (le parent)
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
+        }
+
+        private void candidatTxt_Click(object sender, EventArgs e)
+        {
+            fermer();
+            // Code à mettre dans l'événement clic de votre menu par exemple
+            frmCandidat f = new frmCandidat();
+            f.MdiParent = this; // 'this' désigne le formulaire frmMDI (le parent)
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            frmConnexion f = new frmConnexion();
+            f.Show();
+            this.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            fermer();
+            // Code à mettre dans l'événement clic de votre menu par exemple
+            frmDepartement f = new frmDepartement();
+            f.MdiParent = this; // 'this' désigne le formulaire frmMDI (le parent)
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
 
         }
 
