@@ -63,6 +63,16 @@ namespace ApplicationSenSoutenance.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap coordinateur {
+            get {
+                object obj = ResourceManager.GetObject("coordinateur", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap diplome {
             get {
                 object obj = ResourceManager.GetObject("diplome", resourceCulture);
@@ -86,6 +96,16 @@ namespace ApplicationSenSoutenance.Properties {
         internal static System.Drawing.Bitmap eteindre {
             get {
                 object obj = ResourceManager.GetObject("eteindre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap formation {
+            get {
+                object obj = ResourceManager.GetObject("formation", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

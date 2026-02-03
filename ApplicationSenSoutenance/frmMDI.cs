@@ -167,5 +167,27 @@ namespace ApplicationSenSoutenance
             f.WindowState = FormWindowState.Maximized;
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            fermer();
+            // Code à mettre dans l'événement clic de votre menu par exemple
+            frmChefDeDepartement f = new frmChefDeDepartement();
+            f.MdiParent = this; // 'this' désigne le formulaire frmMDI (le parent)
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            fermer();
+            // Code à mettre dans l'événement clic de votre menu par exemple
+            frmSession f = new frmSession();
+            f.MdiParent = this; // 'this' désigne le formulaire frmMDI (le parent)
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
+
+        }
     }
 }
