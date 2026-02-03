@@ -220,6 +220,55 @@ namespace ApplicationSenSoutenance
 
         }
 
-        
+        private void label7_Click(object sender, EventArgs e)
+        {
+            fermer();
+            // Code à mettre dans l'événement clic de votre menu par exemple
+            frmAnneeAcademique f = new frmAnneeAcademique();
+
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.MdiParent = this;
+            f.Dock = DockStyle.Fill;
+
+            f.Show();
+
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+            fermer();
+            // Code à mettre dans l'événement clic de votre menu par exemple
+            frmMemoire f = new frmMemoire();
+
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.MdiParent = this;
+            f.Dock = DockStyle.Fill;
+
+            f.Show();
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+            fermer();
+            // Code à mettre dans l'événement clic de votre menu par exemple
+            frmSoutenance f = new frmSoutenance();
+
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.MdiParent = this;
+            f.Dock = DockStyle.Fill;
+
+            f.Show();
+        }
     }
 }

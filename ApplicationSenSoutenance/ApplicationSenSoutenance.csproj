@@ -272,6 +272,15 @@
   <ItemGroup>
     <None Include="Resources\formation.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_8911963.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-book_2702154.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infographic_2572457.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

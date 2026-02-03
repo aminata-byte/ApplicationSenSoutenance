@@ -63,6 +63,16 @@ namespace ApplicationSenSoutenance.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calendar_8911963 {
+            get {
+                object obj = ResourceManager.GetObject("calendar_8911963", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap coordinateur {
             get {
                 object obj = ResourceManager.GetObject("coordinateur", resourceCulture);
@@ -113,9 +123,29 @@ namespace ApplicationSenSoutenance.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap infographic_2572457 {
+            get {
+                object obj = ResourceManager.GetObject("infographic_2572457", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lobtention_du_diplome_1_ {
             get {
                 object obj = ResourceManager.GetObject("lobtention-du-diplome(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap open_book_2702154 {
+            get {
+                object obj = ResourceManager.GetObject("open-book_2702154", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
